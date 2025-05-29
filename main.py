@@ -1,4 +1,6 @@
+
 from core.table_queries import initializing_tables
+from login_register import print_menu, register
 
 
 def main():
@@ -31,4 +33,8 @@ def main():
 
 if __name__ == '__main__':
     initializing_tables()
-    main()
+    if print_menu():
+        main()
+    else:
+        print("siz royhatdan otishingiz kerak.")
+        register()
